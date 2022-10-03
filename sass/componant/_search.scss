@@ -1,0 +1,6 @@
+.search{
+    padding-left: 10px;
+    display: flex;
+    flex: 2;
+    @include input;
+}

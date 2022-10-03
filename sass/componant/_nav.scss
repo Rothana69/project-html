@@ -1,0 +1,105 @@
+@import "variable";
+@import "logo";
+@import "button";
+nav{
+    display: flex;
+    background: $main-color;
+    padding: 5px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    .nav{
+
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ul{
+            display: flex;
+            gap: 20px;
+            li{
+                list-style: none;
+                &:hover{
+                    transform: scale(1.2);
+                    transition: .5s;
+                }
+                a{
+                    &:hover{
+                        transform: scale(1.1);
+                        transition: .5s;
+                        color: orange;
+                    }
+                    text-decoration: none;
+                    color:$text-color;
+                }
+            }
+        }
+    }
+    .sign-up{
+        button{
+            &:hover{
+                transform: scale(1.2);
+                transition: .5s;
+            }
+        }
+        flex: 0.5;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 10px;
+    }
+}
+@media (max-width: 500px) {
+    nav{
+        .logo{
+            margin: 0;
+            padding: 0;
+            flex: 0.1;
+        }
+        .nav{
+            flex: 1;
+            ul{
+                li{
+                    font-size: 8px;
+                    display: flex;
+                    gap: 5px;
+                }
+            }
+        }
+        .sign-up{
+            flex: 0.2;
+            padding: 0;
+            button{
+                border-radius: 10px;
+                padding: 5px;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                width: 40px;
+
+                a{
+                    padding: 0;
+                    font-size: 6px;
+                }
+            }
+        }
+    }
+    .title{
+        h1{
+            font-size: 10px;
+            margin-bottom: 10px ;
+        }
+    }
+    h3{
+        font-size: 10px;
+    }
+    h4, h5{
+        font-size: 8px;
+    }
+    .a, p{
+        font-size: 8px;
+    }
+
+    
+}

@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@import "componant/nav";
+@import "componant/footer";
+@import "componant/variable";
+body{
+    height: 100vh;
+    font-family: $font-text;
+}
+#contact{
+    color: orange;
+    border-bottom: 2px solid;
+}
+main{
+    .pic{
+        width: 100%;
+        height: 300px;
+        background-image: url(../images/contact1.jpg);
+        background-size: 100%;
+        background-position: center;
+    }
+    .map{
+        iframe{
+            border-radius: $border-reduce;
+            height: 635px;
+            // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+    }
+    .contact{
+        display: flex;
+        padding: 2%;
+        gap: 10px;
+    }
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .send{
+            width: 100%;
+            border-radius: $border-reduce;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+            .name{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 5px;
+                input{
+                    border-radius: $border-reduce;
+                    border: none;
+                    border-bottom: 1px solid;
+                    padding: 10px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    
+                }
+                textarea{
+                    width: 100%;
+                    border-radius: $border-reduce;
+                }
+            }
+            .check{
+                width: 100%;
+            }
+            button{
+                &:hover{
+                    transform: scale(1.1);
+                    transition: .5s;
+                    color: orange;
+                }
+                width: auto;
+                background:$main-color;
+                color: $text-color;
+            }
+            .sign{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+            
+        }
+    }
+}
+@media (max-width:500px){
+    .contact{
+        display: flex;
+        flex-direction: column;
+        // width: 30px;
+        .map{
+            display: none;
+        }
+    }  
+}
+@media (max-width:800px){
+    .contact{
+        display: flex;
+        flex-direction: column;
+        .map{
+            width: 100%;
+            iframe{
+                width: 100%;
+            }
+        }
+    }  
+}

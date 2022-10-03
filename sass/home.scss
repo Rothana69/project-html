@@ -1,0 +1,16 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+@import "componant/nav";
+#home{
+    color: orange;
+    border-bottom: 2px solid
+}
+@import "componant/main";
+@import "componant/footer";
+body{
+    height: 100vh;
+    font-family: $font-text;
+}

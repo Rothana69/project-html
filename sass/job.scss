@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@import "componant/nav";
+@import "componant/footer";
+@import "componant/card";
+@import "componant/variable";
+@import "componant/search";
+@import "componant/mixin";
+body{
+    height: 100vh;
+    font-family: $font-text;
+}
+#career{
+    color: orange;
+    border-bottom: 2px solid;
+}
+main{
+    .main-top{
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        .side-left{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10%;
+            gap: 10px;
+            flex: 0.5;
+            .search{
+                border-radius: $border-reduce;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                width: 120%;
+            }
+            h1{
+                font-size: 20px;
+            }
+            P{
+                text-align: center;
+            }
+        }
+        .side-right{
+            flex: 1;
+            background-image: url(../images/kk.jpg);
+            background-size: cover;
+        }
+        
+    }
+    .job-info{
+        background-image: url(../images/ll.jpg);
+        background-size: contain;
+        background-position: center;
+        padding: 10px;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        align-items: flex-end;
+    }
+    .inform{
+        gap: 10PX;
+        padding-bottom: 10px;
+        .latest-job{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            button{
+                display: flex;
+                align-self: center;
+            }
+            a{
+                &:hover{
+                    transform: scale(1.05);
+                    transition: .5s;
+                }
+            }
+        
+        }
+        .img-logo{
+            display: flex;
+            flex-direction: column;
+            margin: 0 10px 0 10px;
+            border-radius: $border-reduce;
+            background: $bg-color;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            
+        }
+        .title-pic{
+            text-align: left;
+            color: $btn-color;
+        }
+        @include job-inform{
+            img{
+                height: 100px;
+                width: 100px;
+            }
+            a{
+                text-decoration: none;
+                
+            }
+        };
+        button{
+            &:hover{
+                transform: scale(1.1);
+                transition: .5s;
+            }
+            background:$main-color;
+            a{
+                color:$text-color;
+            }
+        }
+    }
+}
+@media (max-width:500px) {
+    main{
+        .main-top{
+            .side-left{
+                h1{
+                    font-weight: bolder;
+                    font-size: 6px;
+                }
+                .search{
+                    padding: 0;
+                    margin: 0;
+                    input, .icon{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+        .inform{
+            a{
+                .img-logo{
+                    .card-job{
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+

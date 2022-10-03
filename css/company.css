@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  display: flex;
+  flex: 0.5;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.logo-1 {
+  width: 50px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+button {
+  border-radius: 15px;
+  border: none;
+  background: #ffffff;
+  width: 100px;
+  padding: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+button a {
+  text-decoration: none;
+  padding: 10px;
+  color: #000000;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #faa97d;
+}
+
+nav {
+  display: flex;
+  background: #230085;
+  padding: 5px;
+  justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+nav .nav {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .nav ul {
+  display: flex;
+  gap: 20px;
+}
+nav .nav ul li {
+  list-style: none;
+}
+nav .nav ul li:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+nav .nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+nav .nav ul li a:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  color: orange;
+}
+nav .sign-up {
+  flex: 0.5;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+nav .sign-up button:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+@media (max-width: 500px) {
+  nav .logo {
+    margin: 0;
+    padding: 0;
+    flex: 0.1;
+  }
+  nav .nav {
+    flex: 1;
+  }
+  nav .nav ul li {
+    font-size: 8px;
+    display: flex;
+    gap: 5px;
+  }
+  nav .sign-up {
+    flex: 0.2;
+    padding: 0;
+  }
+  nav .sign-up button {
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+  }
+  nav .sign-up button a {
+    padding: 0;
+    font-size: 6px;
+  }
+  .title h1 {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font-size: 10px;
+  }
+  h4, h5 {
+    font-size: 8px;
+  }
+  .a, p {
+    font-size: 8px;
+  }
+}
+footer {
+  background: #230085;
+  display: flex;
+  gap: 50px;
+  padding: 30px;
+}
+footer select {
+  padding: 10px;
+}
+footer .foot-1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+footer .foot-1 a {
+  text-decoration: none;
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+footer h4 {
+  color: #ffffff;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.search {
+  padding-left: 10px;
+  display: flex;
+  flex: 2;
+}
+.search input {
+  padding: 10px;
+  width: 100%;
+  border-radius: 15px 0 0 15px;
+  border: none;
+  outline: none;
+}
+.search .icon {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 0 15px 15px 0;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+#job-advice {
+  color: orange;
+  border-bottom: 2px solid;
+}
+
+main .company {
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  background-image: url(../images/pp.jpg);
+}
+main .menu {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+}
+main .menu .icons {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+main .menu .icons button {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: #230085;
+  color: #ffffff;
+}
+main .menu .icons button:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+main .menu .searcher {
+  display: flex;
+  border-radius: 15px;
+  flex: 1;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+main .menu .searcher .search {
+  background: rgb(224, 224, 224);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.04;
+  border-radius: 0 15px 15px 0;
+}
+main .menu input {
+  flex: 1;
+  border-radius: 15px 0 0 15px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+main .inform {
+  background: #ffffff;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .inform .job-title {
+  padding: 10px;
+  color: #ffffff;
+  background: #230085;
+}
+main .inform a {
+  color: #000000;
+  text-decoration: none;
+}
+main .inform a:hover {
+  transform: scale(1.04);
+  transition: 0.5s;
+}
+main .inform a .card-job {
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  padding: 10px;
+}
+main .inform a .card-job .title-pic {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+@media (max-width: 500px) {
+  .menu {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .menu .searcher {
+    width: 80%;
+  }
+  .menu .searcher input {
+    padding: 10px;
+  }
+  .inform a .card-job .video {
+    background: #000;
+    width: 130px;
+    height: 80px;
+  }
+  .inform a .card-job .video iframe {
+    width: 100%;
+    height: 100%;
+  }
+}/*# sourceMappingURL=company.css.map */

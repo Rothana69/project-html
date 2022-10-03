@@ -1,0 +1,106 @@
+@import "variable";
+@mixin border {
+    border-radius: $border-reduce;
+    border: none;
+    background: $bg-color;
+    @content;
+}
+@mixin input {
+    input{
+        padding: 10px;
+        width: 100%;
+        border-radius: $border-reduce 0 0 $border-reduce;
+        border: none;
+        outline: none;
+        // background: rgb(226, 206, 206);
+    }
+    .icon{
+        // background: rgb(226, 206, 206);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        border: none;
+        border-radius: 0 $border-reduce $border-reduce 0;
+    } 
+}
+@mixin infrom {
+        background-size: cover;
+        background-position: center;
+        padding: 10px;
+        height: 200px;
+        display: flex;
+        align-items: flex-end;
+        @content;
+}
+@mixin h1 {
+        background: rgb(255, 200, 158);
+        padding: 10px;
+        border-radius: $border-reduce;
+}
+@mixin button1 {
+    button:hover{
+        cursor: pointer;
+        background: $hover-color;   
+    }
+}
+@mixin job-inform {
+        margin: 2%;
+        // background: $bg-b-color;
+        .latest-job{
+            padding-bottom: 10px;
+            .job-title{
+                padding: 10px;
+                color: $text-color;
+                background: $main-color;
+            }
+            .img-logo{
+                display: flex;
+                justify-content: space-between;
+                .card-job{
+                    display: flex;
+                    gap: 20px;
+                    flex: 2;
+                    padding: 10px;
+                    color: $text-color;
+                }
+            }
+        }
+    @content;
+}
+@mixin img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    @content;
+    
+}
+@mixin name {
+    display: flex;
+    flex-direction: column;
+    @content;
+}
+@mixin pass {
+    input{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        padding: 10px;
+        border-radius: $border-reduce;
+        border: none;
+        outline: none;
+    }
+    @content;
+}
+@mixin button2 {
+    button{
+        padding: 10px;
+        background: $main-color;
+        border-radius:$border-reduce ;
+        border: none;
+        a{
+            padding: 10px 45%;
+            box-sizing: border-box;
+            text-decoration: none;
+            color:$text-color ;
+        }
+    }
+    
+}
